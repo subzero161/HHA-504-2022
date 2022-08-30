@@ -2,14 +2,14 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/dashboard')
 def hello_world():
-    return 'Hello world!'
+    return 'This is my dashboard!'
 
 ## Note, if you want to run this app with the command `python app.py`, you need to add the following line to the end of the file
 ## so it can execute and stay running....
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=80)
+    app.run(debug=True, host='localhost', port=8000)
 
 ## What is __name__ = __main__ ?
 ## The condition if __name__ == ‘__main__’ is used in a Python program to execute the code inside 
@@ -22,4 +22,4 @@ if __name__ == '__main__':
 # - The `host=' is used to set the host to listen on, use 0.0.0.0 or localhost to listen on all interfaces.
     # this mean you can open up your browser an go to either `localhost` as the website, or `127.0.0.1` as the website.
 # - The `port=80` is used to set the port to listen on. you can change this to whatever open port you want.
-    # if you change the port, you need to update your website address to 0.0.0.0:8080 or localhost:8080 as an example 
+    # if you change the port, you need to update your website address to 0.0.0.0:8080 or localhost:8080 as an example python
